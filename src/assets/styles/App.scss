@@ -1,0 +1,60 @@
+@import "UISystem";
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  row-gap: $xxh;
+  padding: $xxh $xxl;
+  background-color: $grey-900;
+  color: $grey-50;
+}
+
+.playerProtection {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $xxl;
+  p {
+    max-width: 50ch;
+    text-align: justify;
+
+    a {
+      text-decoration: none;
+      color: $grey-50;
+      font-weight: bold;
+    }
+  }
+  ul {
+    list-style-type: none;
+    column-gap: $xxl;
+    row-gap: $m;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    li {
+      &:first-of-type {
+        img {
+          height: $h;
+        }
+      }
+      img {
+        height: $l;
+      }
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: $xxs;
+  p {
+    max-width: 66ch;
+    text-align: justify;
+    color: $grey-600
+  }
+}
+
+@import "Tablet.scss";
+@import "Mobile.scss";

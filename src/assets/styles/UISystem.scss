@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+}
+
+/* Colours */
+$blue-900: #003049;
+$red-900: #d62828;
+$orange-900: #f77f00;
+$yellow-900: #fcbf49;
+$yellow-800: #eae2b7;
+$grey-900: #000000;
+$grey-800: #343a40;
+$grey-700: #495057;
+$grey-600: #adb5bd;
+$grey-500: #ced4da;
+$grey-400: #dee2e6;
+$grey-300: #e9ecef;
+$grey-200: #f1f3f5;
+$grey-100: #f8f9fa;
+$grey-50: #fdfdfe;
+
+/* Font Sizes */
+$xxs: 7px;
+$xs: 12px;
+$s: 14px;
+$m: 16px;
+$l: 18px;
+$xl: 20px;
+$xxl: 24px;
+$xxl: 30px;
+$xxxl: 36px;
+$h: 48px;
+$xh: 60px;
+$xxh: 72px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+body {
+  width: 100dvw;
+
+  font: {
+    family: "Poppins", sans-serif;
+    size: $s;
+    weight: 400;
+  }
+}
