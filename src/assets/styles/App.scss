@@ -57,13 +57,29 @@ footer {
 }
 
 .socialMedia {
-   color: $grey-100;
+  margin-top: $xxh;
+  color: $grey-500;
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
   column-gap: $m;
   font: {
     size: $l;
+  }
+}
+
+.paymentMethods {
+  //   border-bottom: 1px solid $grey-800;
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  column-gap: $m;
+  font: {
+    size: $xxl;
+  }
+  img {
+    height: $xxxl;
+    filter: grayscale(1) brightness(2);
   }
 }
 
