@@ -1,3 +1,4 @@
+import SocialMedia from "./SocialMedia";
 const Contact = () => {
   return (
     <article className="contact">
@@ -25,6 +26,7 @@ const Contact = () => {
         Group Limited.
       </p>
       <p>All rights reserved.</p>
+      <SocialMedia />
     </article>
   );
 };
