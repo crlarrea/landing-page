@@ -1,20 +1,32 @@
 @import "UISystem";
 
 main {
-  background: url("../../assets/img/big_bass_bkg.jpg"), radial-gradient(ellipse at center, red, blue);
+    background: radial-gradient(circle at 50% 50%, transparent , black),url("../../assets/img/big_bass_bkg.jpg");
+//   background: radial-gradient(circle at 50% 10%, transparent, black);
   background-size: var(--backgroundSize) var(--backgroundSize);
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
+  flex-flow: column nowrap;
+  row-gap: $xxl;
   justify-content: center;
   align-items: center;
   img {
     width: 250px;
     animation: shadow ease 3s infinite alternate;
-    
   }
   min-height: 80dvh;
   animation: backgroundZoom ease 20s infinite;
+  a {
+    padding: $xs $xxxl;
+    border: 1px solid $yellow-800;
+    border-radius: 2rem;
+    background-color: $orange-900;
+    text-transform: uppercase;
+    font: {
+      weight: bold;
+    }
+  }
 }
 
 footer {
@@ -33,16 +45,17 @@ footer {
   initial-value: 100%;
 }
 
-@keyframes shadow{
-   0%{
-      filter: drop-shadow(1rem 1rem 0.5rem white) drop-shadow(1rem 1rem 0.5rem turquoise);
-   }
-   50%{
-      filter: drop-shadow(0rem 0rem 0.5rem white);
-   }
-   100%{
-      filter: drop-shadow(-1rem -1rem 0.5rem white);
-   }
+@keyframes shadow {
+  0% {
+    filter: drop-shadow(1rem 1rem 0.5rem white)
+      drop-shadow(1rem 1rem 0.5rem turquoise);
+  }
+  50% {
+    filter: drop-shadow(0rem 0rem 0.5rem white);
+  }
+  100% {
+    filter: drop-shadow(-1rem -1rem 0.5rem white);
+  }
 }
 
 @keyframes backgroundZoom {
@@ -52,7 +65,8 @@ footer {
   50% {
     --backgroundSize: 120%;
   }
-  80%, 100% {
+  80%,
+  100% {
     --backgroundSize: 100%;
   }
 }
