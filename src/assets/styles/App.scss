@@ -1,5 +1,22 @@
 @import "UISystem";
 
+main {
+  background: url("../../assets/img/big_bass_bkg.jpg"), radial-gradient(ellipse at center, red, blue);
+  background-size: var(--backgroundSize) var(--backgroundSize);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 250px;
+    animation: shadow ease 3s infinite alternate;
+    
+  }
+  min-height: 80dvh;
+  animation: backgroundZoom ease 20s infinite;
+}
+
 footer {
   display: flex;
   flex-flow: row wrap;
@@ -8,6 +25,36 @@ footer {
   padding: $xxh $xxl;
   background-color: $grey-900;
   color: $grey-50;
+}
+
+@property --backgroundSize {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+@keyframes shadow{
+   0%{
+      filter: drop-shadow(1rem 1rem 0.5rem white) drop-shadow(1rem 1rem 0.5rem turquoise);
+   }
+   50%{
+      filter: drop-shadow(0rem 0rem 0.5rem white);
+   }
+   100%{
+      filter: drop-shadow(-1rem -1rem 0.5rem white);
+   }
+}
+
+@keyframes backgroundZoom {
+  0% {
+    --backgroundSize: 100%;
+  }
+  50% {
+    --backgroundSize: 120%;
+  }
+  80%, 100% {
+    --backgroundSize: 100%;
+  }
 }
 
 .playerProtection {
